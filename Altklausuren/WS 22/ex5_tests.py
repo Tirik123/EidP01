@@ -27,3 +27,25 @@ def is_strong(pw: str) -> bool:
         else:
             return False
     return True
+
+
+def test1():
+    assert is_strong("") == False
+
+def test2():
+    assert is_strong("134") == False
+
+def test3():
+    assert is_strong("1234") == False
+
+def test4():
+    assert is_strong("1234ABC") == True
+
+
+if __name__ == '__main__':
+    test1()
+    test2()
+    test3()
+    test4()
+
+

@@ -17,12 +17,8 @@ def cluster_by_grade(points: dict[str, int]) -> dict[int, list[str]]:
             inti = int(inti)
             inti = inti * 10
             new_dict_2[nami] = inti
-    '''print(new_dict_2)'''
+    print(new_dict_2)
     return new_dict
-
-
-
-
 
 
 if __name__ == '__main__':

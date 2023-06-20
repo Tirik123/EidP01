@@ -34,7 +34,7 @@ def is_strong(pw: str) -> bool:
 
 
 if __name__ == '__main__':
-    print(is_strong('aaaaaaaa1!'))
+    print(is_strong('aaaaaaaa1'))
             
 
     

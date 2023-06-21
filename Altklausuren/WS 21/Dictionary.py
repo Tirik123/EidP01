@@ -1,4 +1,4 @@
-def cluster_by_grade(points: dict[str, int]) -> dict[int, list[str]]:
+'''def cluster_by_grade(points: dict[str, int]) -> dict[int, list[str]]:
     copy_dict = points
     new_dict = {}
     new_dict_2 = {}
@@ -17,8 +17,18 @@ def cluster_by_grade(points: dict[str, int]) -> dict[int, list[str]]:
             inti = int(inti)
             inti = inti * 10
             new_dict_2[nami] = inti
-    '''print(new_dict_2)'''
-    return new_dict
+        print(new_dict_2)
+    return new_dict'''
+
+
+
+def cluster_by_points(point: dict[str, int]):
+
+
+
+
+
+
 
 
 
@@ -27,4 +37,4 @@ def cluster_by_grade(points: dict[str, int]) -> dict[int, list[str]]:
 
 if __name__ == '__main__':
     points = {"Paul": 15, "Frank": 44, "Tim": 20, "Anna": 29}
-    print(cluster_by_grade(points))
+    print(cluster_by_points(points))

@@ -9,9 +9,6 @@ def words_by_length(text: str) -> dict[int, set[str]]:
             else:
                 new_dict[len(length)].add(length)
     return new_dict
-    
-
-
 
 
 if __name__ == '__main__':

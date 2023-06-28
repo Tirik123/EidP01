@@ -8,9 +8,6 @@ def initials(text: str) -> str:
     return initials_str
 
 
-
-
-
 def balanced_stars(text: str) -> bool:
     star_list = []
     for star in text:
@@ -19,7 +16,6 @@ def balanced_stars(text: str) -> bool:
     if len(star_list) % 2 == 0:
         return True
     return False
-
 
 
 def remove_ness(text: str) -> str:

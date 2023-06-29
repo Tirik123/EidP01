@@ -18,13 +18,10 @@ class Point():
 
 
     def min(self, other):
-        min_Point = min(self.x, other.x), min(self.y, other.y)
-        return f'Point{min_Point}'
+        return Point(min(self.x, other.y), min(self.y, other.y))
     
     def max(self, other):
-        max_Point = max(self.x, other.x), max(self.y, other.y)
-        return f'Point{max_Point}'
-    
+        return Point(max(self.x, other.y), max(self.y, other.y))
      
 
 #b) 
@@ -32,8 +29,8 @@ class Point():
 
 @dataclass
 class Rectangle(Shape):
-    p_min: Point
-    p_max: Point
+    p_min: 'Point'
+    p_max: 'Point'
 
 
     def __post_init__(self):
@@ -46,7 +43,17 @@ class Rectangle(Shape):
     
 
     def union(self, other) -> 'Rectangle':
-        return min(Rectangle(self.p_min.x, self.p_min.y), Rectangle(other.p_min.x, other.p_min.y))    
+        min_Point = self.p_min.min(other.p_min)
+        max_Point = self.p_max.max(other.p_max)
+        return Rectangle(min_Point, max_Point)
+    
+
+
+@dataclass
+class Triangle(Shape):
+    left_corner: Point
+    right_corner: Point
+    upper_corner: Point
 
 
 
@@ -60,3 +67,5 @@ if __name__ == '__main__':
     print(p1.max(p2))
 
     r1 = Rectangle(Point(1, 1), Point(3, 3))
+    r2 = Rectangle(Point(10, 10), Point(30, 30))
+    print(r1.union(r2))

@@ -15,10 +15,10 @@ class Point():
     y: int
 
     def min(self, other):
-        return Point(min(self.x, other.y), min(self.y, other.y))
+        return Point(min(self.x, other.x), min(self.y, other.y))
 
     def max(self, other):
-        return Point(max(self.x, other.y), max(self.y, other.y))
+        return Point(max(self.x, other.x), max(self.y, other.y))
 
 # b)
 
@@ -47,13 +47,13 @@ class Triangle(Shape):
     right_corner: Point
     upper_corner: Point
 
-    def bbox(self, other) -> Rectangle:
-        super().bbox()
-        min_Point1 = (self.left_corner.min(other.left_corner), self.right_corner.min(other.right_corner))
-        min_Point2 = (min_Point1, self.upper_corner.min(other.upper_corner))
-        max_Point1 = (self.left_corner.max(other.left_corner), self.right_corner.max(other.right_corner))
-        max_Point2 = (max_Point1, self.upper_corner.max(other.upper_corner))
-        return Rectangle(min_Point2, max_Point2)
+    def bbox(self) -> Rectangle:
+        #super().bbox()
+        min_Point_left_right = (self.left_corner.min(self.right_corner))
+        min_Point_upper_left_right = (self.upper_corner.min(min_Point_left_right))
+        max_Point_left_right = (self.left_corner.max(self.right_corner))
+        max_Point_upper_left_right = (self.upper_corner.max(max_Point_left_right))
+        return Rectangle(min_Point_upper_left_right, max_Point_upper_left_right)
     
 
 if __name__ == '__main__':
@@ -67,4 +67,4 @@ if __name__ == '__main__':
     print(r1.union(r2))
 
     t = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
-    #print(t.bbox())
+    print(t.bbox())

@@ -56,6 +56,19 @@ class Triangle(Shape):
         return Rectangle(min_Point_upper_left_right, max_Point_upper_left_right)
     
 
+
+'''def bboxes(geo_list: list['Shape']) -> 'Rectangle':
+    rectangle = Rectangle
+    triangle = Triangle
+    for geo in geo_list:
+        if geo == Triangle:
+            triangle_bbox = geo.bbox()
+        elif geo == Rectangle:
+            rectangle_bbox = geo.union()
+    return Rectangle(geo.min(geo), geo.max(geo))'''
+
+    
+
 if __name__ == '__main__':
     p1 = Point(1, 100)
     p2 = Point(2, 20)

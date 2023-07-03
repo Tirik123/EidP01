@@ -20,7 +20,6 @@ def layer(n: int, node: Node) -> list:
     flattened_result = [item for sublist in result for item in sublist]
     return flattened_result
 
-    
 
 
 
@@ -30,4 +29,3 @@ if __name__ == '__main__':
     print(layer(0, tree))
     print(layer(1, tree))
     print(layer(2, tree))
-     

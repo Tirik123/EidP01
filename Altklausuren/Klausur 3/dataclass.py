@@ -26,13 +26,12 @@ class Robot:
     def __ge__(self, other):
         iter_self = 0
         iter_other = 0
-        while self.hp > 0:
+        while self.hp >= 0:
             iter_self += 1
-            self.hp -= self.hit_damage(other)
-        while other.hp > 0:
+            self.hp -= other.hit_damage(self)
+        while other.hp >= 0:
             iter_other += 1
-            other.hp -= other.hit_damage(self)
-        print(iter_self, iter_other)
+            other.hp -= self.hit_damage(other)
         if iter_self >= iter_other:
             return True
         elif iter_other >= iter_self:

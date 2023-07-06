@@ -1,7 +1,8 @@
 def accumulate(xs):
+    result = 0
     for x in xs:
-        for y in xs:
-            yield x + y
+        result += x
+        yield result
 
 
 def my_map(f, xs):
@@ -12,12 +13,20 @@ def my_map(f, xs):
 def double(n: int) -> int:
     return n * 2
 
-
 def init(xs):
-    if xs == []:
-        return []
-    for i in xs:
-        yield i - 1
+    num_elements = 0
+    last_element = None
+
+    for item in xs:
+        num_elements += 1
+        last_element = item
+
+    if num_elements <= 1:
+        return
+
+    for _ in range(num_elements - 1):
+        yield next(xs)
+
 
 
 if __name__ == '__main__':

@@ -1,15 +1,13 @@
 def update_points(student_points: dict[str, int], changes: dict[str, int]) -> dict[str, int]:
-    new_dict = {}
-    for student, grade in student_points.items():
-        if student not in new_dict:
-            new_dict[student] = grade
-    print(new_dict)
-    for students, grades in changes.items():
-        for student, grade in student_points.items():
-            if students in new_dict.keys():
-                new_dict[students] = grades + grade
-    return new_dict
-                
+    for name, additional_points in changes.items():
+        if name in student_points:
+            new_points = student_points[name] + additional_points
+            if new_points > 120 or new_points < 0:
+                raise ValueError(
+                    "Die Gesamtpunktzahl muss zwischen 0 und 120 liegen")
+            student_points[name] = new_points
+        else:
+            raise KeyError(name + " wurde nicht gefunden")
 
 
 

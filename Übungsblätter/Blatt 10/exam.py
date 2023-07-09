@@ -13,7 +13,7 @@ def update_points(student_points: dict[str, int], changes: dict[str, int]) -> di
     return student_points
 
 
-'''def compute_grade(student_points: dict[str, int], max_points: int, student_name: str) -> int:
+def compute_grade(student_points: dict[str, int], max_points: int, student_name: str) -> int:
     pass_points = max_points // 2
     for name in student_points:
         if name == student_name:
@@ -49,10 +49,10 @@ def gt_40(student_points, max_points):
         students_list.append(name)
     if len(failed_students(student_points, max_points)) / len(students_list) > 0.4:
         return True
-    return False'''
+    return False
 
 
-def compute_grade(student_points: dict[str, int], max_points: int, student_name: str) -> int:
+'''def compute_grade(student_points: dict[str, int], max_points: int, student_name: str) -> int:
     pass_points = max_points // 2
     students_count = len(student_points)
     passed_count = len([name for name, points in student_points.items() if points >= pass_points])
@@ -87,16 +87,30 @@ def failed_students(student_points, max_points):
 def gt_40(student_points, max_points):
     students_count = len(student_points)
     passed_count = len([name for name, points in student_points.items() if compute_grade(student_points, max_points, name) != 5])
-    return (passed_count / students_count) >= 0.4
+    return (passed_count / students_count) >= 0.4'''
 
 
+
+#c)
+
+def cluster_by_grade(student_points: dict[str, int], max_points: int) -> dict[int, list[str]]:
+    new_dict = {}
+    for name, grade in student_points.items():
+        grade = compute_grade(student_points, max_points, name)
+        if grade not in new_dict:
+            new_dict[grade] = [name]
+        elif grade in new_dict:
+            new_dict[grade].append(name)
+    return new_dict
 
 if __name__ == '__main__':
-    student_points = {"Adam": 63, "John": 112, "Donald": 43}
+    #student_points = {"Adam": 63, "John": 112, "Donald": 43}
     changes = {"Adam": 3, "John": -7}
     #update_points(student_points, changes)
     #print(student_points)
-    print(compute_grade(student_points, 120, "Adam"))
-    print(failed_students(update_points(student_points, changes), 120))
-    print(gt_40(student_points, 120))
+    #print(compute_grade(student_points, 120, "Adam"))
+    #print(failed_students(update_points(student_points, changes), 120))
+    #print(gt_40(student_points, 120))
+    student_points = {"Mira": 80, "Olivia": 95, "Emily": 83}
+    print(cluster_by_grade(student_points, 120))
 

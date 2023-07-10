@@ -1,2 +1,1 @@
-def newton(f, x):
-    result = x - f(x) // f
+from Blatt_11 import 

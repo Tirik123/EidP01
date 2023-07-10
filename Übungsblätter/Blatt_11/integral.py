@@ -19,6 +19,6 @@ def differentiate(f: Callable[[float], float], h: float) -> Callable[[float], fl
 
 
 
-if __name__ == '__main__':
-    #print(differentiate(lambda x: 1 / 2 * x ** 2, 1e-2)(0))
-    #print(integrate(lambda x: math.exp(x), 5)(0, 1))
+'''if __name__ == '__main__':
+    print(differentiate(lambda x: 1 / 2 * x ** 2, 1e-2)(0))
+    print(integrate(lambda x: math.exp(x), 5)(0, 1))'''

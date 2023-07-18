@@ -11,7 +11,7 @@ def sr_info(data: dict[int, dict[str, set[str]]]) -> dict[str, dict[set[int] | s
                     new_dict[sr] = dict()       # Keys() of new_dict are "SR A", "SR C"; Values() are empty dict()
             if keys == "league":
                 for keyz, valuez in new_dict.items():
-                    valuez["leagues"] = {values}
+                    valuez["leagues"] = values
     print(new_dict)
 
 

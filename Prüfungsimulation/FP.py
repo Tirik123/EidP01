@@ -29,3 +29,7 @@ if __name__ == '__main__':
                 , [ 4, 5, 6 ] ]
     print(map_matrix(lambda x: x * 2, example))
     print(map_matrix_2(lambda x: x * 2, example))
+
+
+
+# 5 / 15

@@ -25,3 +25,7 @@ if __name__ == '__main__':
     print(list(my_chain(range(5), range(2))))
     #print(list(dup(3, range(1, 4))))
     print(list(compare(range(6), range(-3, 7, 3))))
+
+
+
+# 14 / 20

@@ -37,11 +37,14 @@ def test3():    # upper_count <= 2 and len(used_specials) == 0: False
 
 
 def test4():
-    assert is_strong("ABC1234/")
+    assert is_strong("ABC1234/") == True
 
 
 if __name__ == '__main__':
-    print(test1())
+    test1()
     print(test2())
     print(test3())
     print(test4())
+
+
+# 5/10

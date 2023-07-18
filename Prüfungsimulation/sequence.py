@@ -10,3 +10,9 @@ def count_iterations(n: int, a: int) -> int:
 
 if __name__ == '__main__':
     print(count_iterations(3, 100))
+
+
+
+
+
+# 10/10

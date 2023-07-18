@@ -24,3 +24,8 @@ if __name__ == '__main__':
         "Course C": {"Student D", "Student E"},
     }
     print(compose(prof_to_courses, course_to_students))
+
+
+
+
+# 10/10

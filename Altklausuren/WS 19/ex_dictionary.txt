@@ -1,4 +1,6 @@
-1. [8 Punkte] Schreiben Sie eine Funktion `word_counts` die einen String `s` als Argument nimmt und ein Dictionary zurückgibt, welches zählt wie oft jedes Wort in `s` vorkommt.
+1. [8 Punkte] Schreiben Sie eine Funktion `word_counts`
+die einen String `s` als Argument nimmt
+und ein Dictionary zurückgibt, welches zählt wie oft jedes Wort in `s` vorkommt.
 
 Beispiel:
 [code]

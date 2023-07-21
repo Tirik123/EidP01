@@ -1,4 +1,5 @@
-1. [6 Punkte] Schreiben Sie eine Funktion `compose` die zwei Funktionen `f` und `g` als Argumente nimmt und eine Funktion zurückgibt die ein Argument `x` nimmt und `f(g(x))` berechnet.
+1. [6 Punkte] Schreiben Sie eine Funktion `compose` die zwei Funktionen `f` und `g` als Argumente nimmt 
+und eine Funktion zurückgibt die ein Argument `x` nimmt und `f(g(x))` berechnet.
 
 Beispiel:
 [code]
@@ -10,7 +11,8 @@ Beispiel:
 11
 [/code]
 
-2. [6 Punkte] Schreiben Sie eine Funktion `factor_pairs` die eine ganze Zahl `n` mit `n >= 0` als Argument nimmt und eine Liste aller Paare `(x,y)` zurückgibt, sodass `x * y = n` gilt. Verwenden Sie hierzu genau eine List-Comprehension.
+2. [6 Punkte] Schreiben Sie eine Funktion `factor_pairs` die eine ganze Zahl `n` mit `n >= 0` als Argument nimmt 
+und eine Liste aller Paare `(x,y)` zurückgibt, sodass `x * y = n` gilt. Verwenden Sie hierzu genau eine List-Comprehension.
 
 Beispiel:
 [code]

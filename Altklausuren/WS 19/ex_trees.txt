@@ -20,9 +20,15 @@ Beispiel:
         ])
 [/code]
 
-1. [8 Punkte] Implementieren Sie die Methode `marks`, welche eine Liste aller Markierungen des Baumes zurückgibt. Verwenden Sie hierzu die *pre-order* Reihenfolge.
+1. [8 Punkte] Implementieren Sie die Methode `marks`, 
+welche eine Liste aller Markierungen des Baumes zurückgibt. 
+Verwenden Sie hierzu die *pre-order* Reihenfolge.
 
-2. [8 Punkte] Implementieren Sie die Methode `map`, welche eine Funktion `f` als Argument nimmt, `f` auf jede Markierung des Baumes anwendet und das Ergebnis als neuen Baum mit gleicher Struktur zurückgibt. Der ursprüngliche Baum darf dabei nicht verändert werden.
+2. [8 Punkte] Implementieren Sie die Methode `map`, 
+welche eine Funktion `f` als Argument nimmt, 
+`f` auf jede Markierung des Baumes anwendet 
+und das Ergebnis als neuen Baum mit gleicher Struktur zurückgibt. 
+Der ursprüngliche Baum darf dabei nicht verändert werden.
 
 Beispiel:
 [code]

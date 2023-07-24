@@ -1,0 +1,4 @@
+1. keine state-machines
+2. kommentare vom code bringen vllt. punkte
+3. personalausweis + studentenausweis + rz-kürzel + passwort für klausur mitbringen
+

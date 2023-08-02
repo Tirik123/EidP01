@@ -1,5 +1,6 @@
 import math
 
+
 def is_prime(n: int) -> bool:
     if n == 2:
         return True
@@ -29,9 +30,6 @@ def test3():
 
 def test4():
     assert is_prime(3) is True
-
-
-
 
 
 if __name__ == '__main__':

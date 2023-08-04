@@ -1,26 +1,27 @@
 from dataclasses import dataclass
 from typing import Optional
-
-
-# Pre-Order: Mark, Left, Right
-
 @dataclass
 class Node:
-    mark: str
+    mark: str   
     left: Optional['Node']
     right: Optional['Node']
 
 
+
 def find_substrings(node: Node, substr: str) -> list[str]:
-    new_list = []
+    result = []
     if substr in node.mark:
-        new_list.append(node.mark)
-    if node.left != None:
-        new_list += find_substrings(node.left, substr)
-    if node.right != None:
-        new_list += find_substrings(node.right, substr)
-    return new_list
-    
+        result.append(node.mark)
+    if node.left is not None:
+        pass
+    if node.right is not None:
+        pass
+    return result
+
+
+
 if __name__ == '__main__':
-    tree = Node("aab", Node("baa", None, None), Node("aba", None, None))
+    tree = Node("aab", 
+                Node("baa", None, None), 
+                Node("aba", None, None))
     print(find_substrings(tree, 'ab'))

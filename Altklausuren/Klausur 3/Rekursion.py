@@ -1,31 +1,46 @@
 from dataclasses import dataclass
-from typing import Optional
+
 
 @dataclass
-class Node:
-    mark: str
-    left: Optional['Node']
-    right: Optional['Node']
+class TextNode:
+    text: str
 
 
-
-def layer(n: int, node: Node) -> list:
-    if n == 0:
-        return [node.mark]
-    result = []
-    if node.left:
-        result.append(layer(n - 1, node.left))
-    if node.right:
-        result.append(layer(n - 1, node.right))
-    flattened_result = [item for sublist in result for item in sublist]
-    return flattened_result
+@dataclass
+class ElemNode:
+    name: str
+    children: list["Node"]
 
 
+Node = TextNode | ElemNode
+
+
+def node_to_str(node: Node) -> str:
+    result = ''
+    match node:
+        case TextNode(text):
+            return text
+        case ElemNode(name, children):        
+            result += '<' + name + '>'
+            for i in children:
+                result += node_to_str(i)
+            return result + '</' + name + '>'
+        
+
+
+#b)
+
+def p(*args):
+    if type(Node) == TextNode:
+        for p in args:
+            node_to_str(p)
+        
+        
 
 
 if __name__ == '__main__':
-    tree = Node('0', Node('1a', None, Node('2', None, None)),
-                Node('1b', None, None))
-    print(layer(0, tree))
-    print(layer(1, tree))
-    print(layer(2, tree))
+    #print(node_to_str(TextNode('important')))
+    #print(node_to_str(ElemNode('b', [])))
+    #print(node_to_str(ElemNode("b", [TextNode('important')])))
+    print(node_to_str(ElemNode('p', [TextNode('It is very '), ElemNode('b', [TextNode('important')]), TextNode(' to pay attention')])))
+    assert p() == ElemNode('p', [])

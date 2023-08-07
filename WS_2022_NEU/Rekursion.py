@@ -23,9 +23,7 @@ def mark_at_path(tree: Tree, path: str) -> Optional[str]:
     elif path[0] == 'r':
         if tree.right is not None:
             return mark_at_path(tree.right, path[1:])
-
-
-
+    
 
 
 

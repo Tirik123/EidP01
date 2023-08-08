@@ -19,7 +19,7 @@ def is_scientific(s: str) -> bool:
         if x[3].isdigit() is False:
             return False
         if x[1].isdigit() is True:
-            if int(x[1]) >= 10 and int(x[1]) <= 0:
+            if int(x[1]) >= 10 or int(x[1]) <= 0:
                 return False
     elif x[0] != '-' and x[0] != '+':
         if len(x) > 3 or len(x) < 1:
@@ -35,7 +35,7 @@ def is_scientific(s: str) -> bool:
             if int(x[0]) >= 10 and int(x[0]) <= 0:
                 return False
         if x[2].isdigit() is True:
-            if int(x[2]) >= 10 and int(x[2]) <= 0:
+            if int(x[2]) >= 10 or int(x[2]) <= 0:
                 return False
     y = split[1]
     if len(y) < 1:
